@@ -12,3 +12,4 @@ FROM php:7.3-fpm
 #     && pecl install memcached \
 #     && docker-php-ext-enable redis xdebug memcached
 ADD / /home/app/code
+COPY ./code/index.php /home/app/code
