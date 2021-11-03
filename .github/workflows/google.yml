@@ -18,7 +18,7 @@ on:
       - master
 
 env:
-  PROJECT_ID: ${{ secrets.marlen-305015 }}
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: gke-test-github    # TODO: update to cluster name
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
@@ -38,7 +38,7 @@ jobs:
     - uses: google-github-actions/setup-gcloud@v0.2.0
       with:
         service_account_key: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ secrets.marlen-305015 }}
+        project_id: ${{ secrets.GKE_PROJECT }}
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
