@@ -1,0 +1,6 @@
+commonLabels:
+ app: php-nginx
+resources:
+ - deployment.yaml
+ - configmap.yaml
+ - service.yaml
