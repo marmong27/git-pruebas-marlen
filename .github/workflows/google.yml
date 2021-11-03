@@ -21,8 +21,8 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: gke-test-github    # TODO: update to cluster name
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
-  IMAGE: static-site
+  DEPLOYMENT_NAME: php-nginx-deployment # TODO: update to deployment name
+  IMAGE: php-nginx
 
 jobs:
   setup-build-publish-deploy:
