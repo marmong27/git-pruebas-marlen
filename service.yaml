@@ -1,0 +1,16 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "php-nginx-deployment-service"
+  namespace: "default"
+  labels:
+    app: "php-nginx"
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: "php-nginx"
+  type: "LoadBalancer"
